@@ -46,7 +46,13 @@ def utn_heroes_app(lista_nombres, lista_identidades, lista_generos, lista_podere
             case 9:
                 utn_mostrar_heroes_mas_debiles(lista_alturas,lista_generos,lista_identidades,
                                                lista_nombres,lista_poderes)
-            case 10: # Salir del programa
+            case 10:
+                pass
+            case 11:
+                pass
+            case 12:
+                pass
+            case 13: # Salir del programa
                 break
             
         limpiar_pantalla()

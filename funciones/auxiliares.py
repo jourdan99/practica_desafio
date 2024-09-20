@@ -80,6 +80,7 @@ def obtener_maximo(lista_de_numeros:list) -> float:
     return float(valor_maximo)
 
 
+
 def promedio(lista_de_numeros:list) -> float:
     """Esta función pide como parametro una lista
     que tenga elementos del tipo int ó float para recorrela
@@ -121,8 +122,38 @@ def obtener_mitad_de_maximo (lista_numeros):
 
     return mitad_maximo
 
+def bubble_sort_ascendente(lista_a_ordenar: list[int], lista_uno, lista_dos, lista_tres, lista_cuatro) -> list:
+    """Esta función toma como parámetro una lista de números y
+    ordena sus elementos de manera ascendente y retorna la lista
+    modificada.
 
+    Args:
+        lista_a_ordenar(list[int]): lista de números
 
+    Returns:
+            *None*
+    """
+
+    for indice in range(len(lista_a_ordenar) - 1):
+
+        for sub_indice in range (indice + 1 , len(lista_a_ordenar)):
+            
+            if lista_a_ordenar[indice] > lista_a_ordenar[sub_indice]:
+
+                lista_a_ordenar[indice], lista_a_ordenar[sub_indice] =\
+                lista_a_ordenar[sub_indice], lista_a_ordenar[indice]
+
+    
+def mostrar_datos_heroes(indice,lista_alturas,lista_generos,lista_identidades,
+                                   lista_nombres,lista_poder):
+    """
+    """
+    mensaje = f"Nombre: {lista_nombres[indice]:20} | "\
+                f"Identidad: {lista_identidades[indice]:15} | "\
+                f"Altura: {lista_alturas[indice]:8.1f} | "
+    
+    print(mensaje)
+    
 if __name__ == '__main__':
     mostrar_nombre()
     obtener_maximo()

@@ -1,4 +1,4 @@
-from .auxiliares import obtener_maximo , promedio , obtener_mitad_de_maximo
+from .auxiliares import obtener_maximo , promedio , obtener_mitad_de_maximo, mostrar_datos_heroes
 
 def utn_mostrar_nombres_heroes(lista_nombres: list):
     """Esta función recibe como parámetro una lista(list)
@@ -45,24 +45,26 @@ def utn_mostrar_heroe_mayor_altura(lista_alturas,lista_generos,lista_identidades
     Returns:
             *None*
     """
-    indice = 0
+    # indice = 0
     heroe_mas_alto = obtener_maximo(lista_alturas)
-    indice_heroe_mas_alto = None
-    for valor in lista_alturas:
-        if valor == heroe_mas_alto:
-            indice_heroe_mas_alto = indice
-        indice += 1
-    
-    mensaje =\
-            f"""
-Héroe más alto: {lista_nombres[indice_heroe_mas_alto]}
-Altura: {lista_alturas[indice_heroe_mas_alto]}
-Identidad: {lista_identidades[indice_heroe_mas_alto]}
-Género: {lista_generos[indice_heroe_mas_alto]}
-Poder: {lista_poder[indice_heroe_mas_alto]}
+    # indice_heroe_mas_alto = None
+    # for valor in lista_alturas:
+    #     if valor == heroe_mas_alto:
+    #         indice_heroe_mas_alto = indice
+    #     indice += 1
+    for indice in range(len(lista_alturas)):
+        if lista_alturas[indice] == heroe_mas_alto:
+            mostrar_datos_heroes(indice,lista_alturas,lista_generos,lista_identidades,lista_nombres,lista_poder)
+#     mensaje =\
+#             f"""
+# Héroe más alto: {lista_nombres[indice_heroe_mas_alto]}
+# Altura: {lista_alturas[indice_heroe_mas_alto]}
+# Identidad: {lista_identidades[indice_heroe_mas_alto]}
+# Género: {lista_generos[indice_heroe_mas_alto]}
+# Poder: {lista_poder[indice_heroe_mas_alto]}
         
-        """
-    print(mensaje)
+#         """
+#     print(mensaje)
 
 def utn_mostrar_heroes_mas_fuertes(lista_alturas,lista_generos,lista_identidades,
                                    lista_nombres,lista_poder):
@@ -211,3 +213,4 @@ Poder(por debajo {minimo_poder}): {lista_poder[indice]}
             print(mensaje)
         indice += 1
         
+

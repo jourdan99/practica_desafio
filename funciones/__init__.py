@@ -27,5 +27,5 @@ from .funciones import (
     utn_mostrar_heroes_mas_debiles
 )
 
-from .auxiliares import play_sound, limpiar_pantalla, obtener_maximo , promedio , obtener_mitad_de_maximo
+from .auxiliares import play_sound, limpiar_pantalla, obtener_maximo , promedio , obtener_mitad_de_maximo,mostrar_datos_heroes
 from .salida_consola import mostrar_menu
